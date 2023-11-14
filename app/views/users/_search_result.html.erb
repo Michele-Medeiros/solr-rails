@@ -1,7 +1,18 @@
 <div class="row">
   <div class="col">
-    # <strong><%= result %></strong><br /> Working...
-    <strong><%= result:first_name %></strong><br />
+    <strong><%= result %></strong><br />
+    <% result.each do |user| %>
+      <tr>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.address %></td>
+        <td><%= user.city %></td>
+        <td><%= user.zip_code %></td>
+        <td><%= user.company %></td>
+        <td><%= user.company_description %></td>
+      </tr>
+      <% end %>
     <br />
   </div>
 </div>
