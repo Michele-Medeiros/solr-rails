@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   searchable do
-    text :first_name, :as => "first_name"
+    text :first_name
     text :last_name
     text :email
     text :address
