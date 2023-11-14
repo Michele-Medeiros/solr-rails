@@ -2,17 +2,10 @@
   <div class="col">
     <strong><%= result %></strong><br />
     <% result.each do |user| %>
-      <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.email %></td>
-        <td><%= user.address %></td>
-        <td><%= user.city %></td>
-        <td><%= user.zip_code %></td>
-        <td><%= user.company %></td>
-        <td><%= user.company_description %></td>
-      </tr>
-      <% end %>
-    <br />
+      <%= link_to "#{user.first_name} #{user.last_name} <#{user.email}>", user_path(user) %><br />
+      <strong><%= user.company %></strong><br />
+      <em><%= user.company_description %></em><br />
+      <br />
+    <% end %>
   </div>
 </div>
