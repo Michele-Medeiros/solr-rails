@@ -1,4 +1,4 @@
-class User < ApplicationRecord::Base
+class User < ApplicationRecord
   searchable do
     text :first_name
     text :last_name
