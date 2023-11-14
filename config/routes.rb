@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  root :to => 'UsersController#index'
+  root :to => 'users#index'
   # resources :users
   resources :users do
     collection do
